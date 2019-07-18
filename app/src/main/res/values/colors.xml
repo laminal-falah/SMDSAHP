@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransWhite">#45FFFFFF</color>
+    <color name="colorDark">#A3272925</color>
+
+    <color name="blackPrimary">#2E2E2E</color>
+    <color name="greyPrimary">#DE000000</color>
+    <color name="greySecondary">#8B000000</color>
+    <color name="greyDisabled">#61000000</color>
+
+    <color name="tab_background_selected">#F7F7F7</color>
+    <color name="tab_background_unselected">@android:color/white</color>
+
+    <color name="ic_launcher_background">#FFFFFF</color>
+</resources>

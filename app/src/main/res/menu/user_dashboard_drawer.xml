@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_laporan"
+            android:icon="@drawable/ic_menu_laporan_grey_24dp"
+            android:title="@string/menu_7" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_menu_profil_grey_24dp"
+            android:title="@string/menu_9" />
+        <item
+            android:id="@+id/nav_tentang"
+            android:icon="@drawable/ic_menu_tentang_grey_24dp"
+            android:title="@string/menu_10" />
+    </group>
+
+</menu>

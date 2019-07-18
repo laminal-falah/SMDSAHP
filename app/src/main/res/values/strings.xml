@@ -1,0 +1,290 @@
+<resources>
+    <string name="app_name">SMDS AHP</string>
+
+    <!-- Strings related to permission dialog -->
+    <string name="title_permission">Butuh Izin</string>
+    <string name="msg_permission_0">Aplikasi membutuhkan izin akses untuk menjalankan tanpa masalah.</string>
+    <string name="msg_permission_1">Kamu menolak izin akses. Izinkan semua akses di [Pengaturan] > [Aplikasi atau Izin Akses]</string>
+    <string name="positive_permission_0">Ya, Izinkan Akses</string>
+    <string name="positive_permission_1">Ke Pengaturan</string>
+    <string-array name="msg_permissions">
+        <item>@string/msg_permission_0</item>
+        <item>@string/msg_permission_1</item>
+    </string-array>
+    <string-array name="positive_permission">
+        <item>@string/positive_permission_0</item>
+        <item>@string/positive_permission_1</item>
+    </string-array>
+    <string name="negative_permission">Tidak, Keluar aplikasi</string>
+
+    <!-- Strings related to authentication -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Kata Sandi</string>
+    <string name="action_sign_in_short">Form Autentikasi</string>
+    <string name="action_forget_short">Form Lupa Kata Sandi</string>
+    <string name="error_invalid_email">Alamat Email tidak benar</string>
+    <string name="error_credentials_email">Alamat Email belum terdaftar</string>
+    <string name="error_invalid_password">Kata Sandi Mininum 8 Karakter</string>
+    <string name="error_incorrect_password">Kata Sandi tidak benar</string>
+    <string name="error_field_required">Kolom ini diperlukan</string>
+    <string name="textfield_login">Punya akun ? Klik disini !</string>
+    <string name="textfield_forget">Lupa Password ? Klik disini !</string>
+    <string name="btn_login">Masuk</string>
+    <string name="btn_reset">Setel Ulang Kata Sandi</string>
+    <string name="msg_login_success">Berhasil Masuk</string>
+    <string name="msg_login_failed">Gagal Masuk</string>
+    <string name="msg_reset_password">Tautan Setel Ulang Kata Sandi Telah dikirim</string>
+    <string name="msg_logout">Keluar</string>
+
+    <!-- Strings related to generals -->
+    <string name="msg_no_internet">Tidak ada koneksi internet</string>
+    <string name="msg_back_online">Kembali daring</string>
+    <string name="msg_exit">Tekan kembali lagi untuk keluar</string>
+    <string name="msg_data_results">Oops, tidak dapat menemukan hasil apapun \n yang cocok dengan filter anda.</string>
+    <string name="textfield_search">Cari&#8230;</string>
+
+    <!-- Strings related to menu -->
+    <string name="menu_0">Dashboard</string>
+    <string name="menu_1">Kriteria</string>
+    <string name="menu_2">Sub Kriteria</string>
+    <string name="menu_3">Perbandingan Kriteria</string>
+    <string name="menu_4">Perbandingan Sub Kriteria</string>
+    <string name="menu_5">Hasil Perbandingan</string>
+    <string name="menu_7">Laporan</string>
+    <string name="menu_8">Pengguna</string>
+    <string name="menu_9">Profil</string>
+    <string name="menu_10">Tentang</string>
+    <string name="menu_11">Notifikasi</string>
+
+    <string-array name="menu_admin">
+        <item>@string/menu_0</item>
+        <item>@string/menu_1</item>
+        <item>@string/menu_5</item>
+        <item>@string/menu_7</item>
+        <item>@string/menu_8</item>
+        <item>@string/menu_9</item>
+        <item>@string/menu_10</item>
+    </string-array>
+
+    <string-array name="menu_user">
+        <item>@string/menu_7</item>
+        <item>@string/menu_9</item>
+        <item>@string/menu_10</item>
+    </string-array>
+
+    <!-- Strings related to profile -->
+    <string name="name_profile">Title Profil</string>
+    <string name="subname_profile">Isi Profil</string>
+    <string name="profile_fullname">Nama Lengkap</string>
+    <string name="profile_email">E-mail</string>
+    <string name="profile_telephone">Telepon</string>
+    <string name="profile_access">Hak Akses</string>
+
+    <string name="tab_data_diri">Data Diri</string>
+    <string name="tab_password">Kata Sandi</string>
+    <string name="hint_pass_old">Kata Sandi Lama</string>
+    <string name="hint_pass_new">Kata Sandi Baru</string>
+
+    <string name="btn_update_profile">Ubah Data Diri</string>
+    <string name="btn_update_password">Ubah Kata Sandi</string>
+
+    <string-array name="menu_profile">
+        <item>@string/profile_fullname</item>
+        <item>@string/profile_email</item>
+        <item>@string/profile_telephone</item>
+        <item>@string/profile_access</item>
+    </string-array>
+
+    <!-- Strings related to Kriteria -->
+    <string name="list_nama_kriteria">Nama Kriteria</string>
+    <string name="hint_kode_kriteria">Kode Kriteria</string>
+    <string name="hint_nama_kriteria">Nama Kriteria</string>
+
+    <!-- Strings related to sub kriteria -->
+    <string name="list_nama_sub_kriteria">Sub Kriteria</string>
+    <string name="hint_kode_sub_kriteria">Kode Sub Kriteria</string>
+    <string name="hint_nama_sub_kriteria">Nama Sub Kriteria</string>
+    <string name="hint_nilai_min_sub_kriteria">Standar Nilai Minimum</string>
+    <string name="hint_nilai_max_sub_kriteria">Standar Nilai Maksimum</string>
+    <string name="hint_std_nilai_satuan">Standar Nilai Satuan</string>
+    <string name="satuan_bulat">1. Nilai Bulat 0 &#8211; 9999</string>
+    <string name="satuan_persen">2. Nilai Persen 0.0 &#8211; 100.0</string>
+    <string-array name="satuan_nilai">
+        <item>@string/hint_std_nilai_satuan</item>
+        <item>@string/satuan_bulat</item>
+        <item>@string/satuan_persen</item>
+    </string-array>
+
+    <!-- Strings related to Kriteria & sub kriteria validation -->
+    <string name="error_ka_0">%s diperlukan</string>
+    <string name="error_ka_1">%s minimal %d karakter dan maksimal %d karakter</string>
+    <string name="error_ka_2">%s hanya [%s 0 &#8211; 9]</string>
+    <string name="error_ka_4">%s tidak boleh lebih besar sama dengan dari %s</string>
+    <string name="error_ka_5">%s tidak boleh lebih dari %s</string>
+    <string name="error_ka_6">%s tidak benar</string>
+    <string name="error_ka_7">%s tidak boleh sama dengan dari %s</string>
+    <string name="btn_save_ka">Simpan</string>
+    <string name="btn_update_ka">Ubah</string>
+
+    <!-- String related to Perbandingan Kriteria & SubKriteria -->
+    <string name="hint_eigen_vektor">Nilai Eigen Vektor</string>
+    <string name="hint_eigen_vektor_all">Eigen Vector (λ maks) : %s</string>
+    <string name="hint_ci">Consistency Index : %s</string>
+    <string name="hint_cr">Consistency Ratio : %s</string>
+    <string name="hint_cr_lebih">Nilai Consistency Ratio melebihi 10% !!!</string>
+    <string name="btn_hitung_perbandingan">Hitung Perbandingan</string>
+    <string name="btn_lanjut_perbandingan">Lanjut</string>
+    <string name="btn_hitung_ulang_perbandingan">Hitung Ulang</string>
+    <string name="btn_result_perbandingan">Result Hasil Perbandingan</string>
+    <string name="error_perbandingan_0">Tingkat kepentingan diperlukan !</string>
+    <string name="hint_pilihan_a">Pilihan A</string>
+    <string name="hint_pilihan_b">Pilihan B</string>
+    <string name="jumlah_mpb">Jumlah Perbandingan Berpasangan</string>
+    <string name="jumlah_mnk">Jumlah Nilai Kriteria</string>
+    <string name="hint_jumlah_mpb">%s : %s</string>
+    <string name="hint_jumlah_mnk_0">%s : %s</string>
+    <string name="hint_jumlah_mnk_1">Eigen Vektor : %s</string>
+
+    <!-- Strings related to Laporan -->
+    <string name="list_nama_laporan">Laporan</string>
+    <string name="hint_gambar_karung">Pilih Gambar Karung</string>
+    <string name="hint_nama_karung">Nama Karung</string>
+    <string name="hint_nilai_karung">Nilai %s</string>
+    <string name="hint_grade_karung">Grade Karung</string>
+    <string name="hint_nama_user">Nama Pengguna</string>
+    <string name="hint_nama_kriteria_karung">Nama Kriteria</string>
+    <string name="hint_nama_sub_kriteria_karung">Nama Sub Kriteria</string>
+    <string name="hint_nilai_sub_kriteria_karung">Nilai Sub Kriteria</string>
+    <string name="error_laporan">%s diperlukan !</string>
+    <string name="btn_simpan_laporan">Simpan</string>
+
+    <!-- Strings related to Manajemen Users -->
+    <string name="list_nama_user">Nama : %s</string>
+    <string name="list_level_user">Hak Akses : %s</string>
+    <string name="hint_fullname">Nama Lengkap</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Telepon</string>
+    <string name="hint_password">Kata Sandi</string>
+    <string name="error_user_0">%s diperlukan</string>
+    <string name="error_user_1">Nama lengkap minimal 2 karakter</string>
+    <string name="error_user_2">Alamat Email tidak benar !</string>
+    <string name="error_user_3">Nomor telepon tidak benar !</string>
+    <string name="error_user_4">Kata sandi minimal 8 karakter !</string>
+    <string name="btn_save_user">Simpan</string>
+    <string name="btn_update_user">Ubah</string>
+    <string name="name_detail">Title Detail</string>
+    <string name="subname_detail">Isi Detail</string>
+    <string name="detail_user_fullname">@string/profile_fullname</string>
+    <string name="detail_user_email">@string/profile_email</string>
+    <string name="detail_user_telephone">@string/profile_telephone</string>
+    <string name="detail_user_access">@string/profile_access</string>
+    <string-array name="list_detail_user">
+        <item>@string/detail_user_fullname</item>
+        <item>@string/detail_user_email</item>
+        <item>@string/detail_user_telephone</item>
+        <item>@string/detail_user_access</item>
+    </string-array>
+
+    <!-- Strings related to Filter -->
+    <string name="value_any_sort">Pilih Sorting</string>
+    <string name="sort_by_name_0">Sorting dari nama A &#8211; Z</string>
+    <string name="sort_by_name_1">Sorting dari nama Z &#8211; A</string>
+    <string name="header_filter">Filter</string>
+    <string name="apply_filter">Terapkan</string>
+    <string name="cancel_filter">Batal</string>
+    <string name="reset_filter">Reset</string>
+    <string-array name="sort_by_general">
+        <item>@string/value_any_sort</item>
+        <item>@string/sort_by_name_0</item>
+        <item>@string/sort_by_name_1</item>
+    </string-array>
+
+    <!-- Strings related to Snackbar -->
+    <string name="snack_bar_add">tambah data</string>
+    <string name="snack_bar_update">mengubah data</string>
+    <string name="snack_bar_delete">menghapus data</string>
+    <string name="snack_bar_success">Berhasil %s %s</string>
+    <string name="snack_bar_error">Kesalahan -> %s</string>
+
+    <!-- Strings related to DialogBuilder hapus -->
+    <string name="title_hapus">Apakah anda yakin ?</string>
+    <string name="message_hapus">Menghapus data %s dari %s</string>
+    <string name="positive_hapus">Ya, Hapus</string>
+    <string name="negative_hapus">Tidak</string>
+
+    <!-- Strings related to title toolbar -->
+    <string name="toolbar_add">Tambah %s</string>
+    <string name="toolbar_edit">Edit %s</string>
+    <string name="toolbar_detail">Detail %s</string>
+    <string-array name="toolbar_hitung">
+        <item>@string/menu_3</item>
+        <item>@string/menu_4</item>
+    </string-array>
+
+    <!-- Strings related to level -->
+    <string name="level_choose">Pilih Level</string>
+    <string name="level_admin">admin</string>
+    <string name="level_user">user</string>
+    <string-array name="levels">
+        <item>@string/level_choose</item>
+        <item>@string/level_admin</item>
+        <item>@string/level_user</item>
+    </string-array>
+
+    <!-- Strins related to nilai perbandingan -->
+    <string name="kepentingan_0">Pilih tingkat kepentingan</string>
+    <string name="kepentingan_1">1. Sama pentingnya</string>
+    <string name="kepentingan_2">2. Sama hingga sedikit lebih penting</string>
+    <string name="kepentingan_3">3. Sedikit lebih penting</string>
+    <string name="kepentingan_4">4. Sedikit lebih hingga jelas lebih penting</string>
+    <string name="kepentingan_5">5. Jelas lebih penting</string>
+    <string name="kepentingan_6">6. Jelas hingga sangat jelas lebih penting</string>
+    <string name="kepentingan_7">7. Sangat jelas lebih penting</string>
+    <string name="kepentingan_8">8. Sangat jelas hingga mutlak lebih penting</string>
+    <string name="kepentingan_9">9. Mutlak lebih penting</string>
+    <string-array name="kepentingan">
+        <item>@string/kepentingan_0</item>
+        <item>@string/kepentingan_1</item>
+        <item>@string/kepentingan_2</item>
+        <item>@string/kepentingan_3</item>
+        <item>@string/kepentingan_4</item>
+        <item>@string/kepentingan_5</item>
+        <item>@string/kepentingan_6</item>
+        <item>@string/kepentingan_7</item>
+        <item>@string/kepentingan_8</item>
+        <item>@string/kepentingan_9</item>
+    </string-array>
+
+    <string name="close_dialog">Tutup</string>
+    <string name="text_about">
+        Sistem Pendukung Keputusan dengan metode AHP (Analitycal Hierarchy Process) \n
+        Analytic Hierarchy Process (AHP) merupakan suatu model pendukung keputusan yang dikembangkan oleh Thomas L. Saaty. \n
+        Model pendukung keputusan ini akan menguraikan masalah multi faktor atau multi kriteria yang kompleks menjadi suatu hirarki. \n
+        Hirarki didefinisikan sebagai suatu representasi dari sebuah permasalahan yang kompleks dalam suatu struktur multi level dimana level pertama adalah tujuan, yang diikuti level faktor, kriteria, sub kriteria, dan seterusnya ke bawah hingga level terakhir dari alternatif. \n
+        AHP membantu para pengambil keputusan untuk memperoleh solusi terbaik dengan mendekomposisi permasalahan kompleks ke dalam bentuk yang lebih sederhana untuk kemudian melakukan sintesis terhadap berbagai faktor yang terlibat dalam permasalahan pengambilan keputusan tersebut. \n
+        AHP mempertimbangkan aspek kualitatif dan kuantitatif dari suatu keputusan dan mengurangi kompleksitas suatu keputusan dengan membuat perbandingan satu-satu dari berbagai kriteria yang dipilih untuk kemudian mengolah dan memperoleh hasilnya. \m
+        AHP sering digunakan sebagai metode pemecahan masalah dibanding dengan metode yang lain karena alasan-alasan sebagai berikut : \n
+        1. Struktur yang berhirarki, sebagai konsekuesi dari kriteria yang dipilih, sampai pada subkriteria yang paling dalam. \n
+        2. Memperhitungkan validitas sampai dengan batas toleransi inkonsistensi berbagai kriteria dan alternatif yang dipilih oleh pengambil keputusan. \n
+        3. Memperhitungkan daya tahan output analisis sensitivitas pengambilan keputusan. \n\n
+        Tabel Tingkat Kepentingan menurut Saaty (1980) \n\n
+        Nilai Numerik -> Tingkat Kepentingan (Preference) \n
+            1 -> Sama pentingnya (Equal Importance) \n
+            2 -> Sama hingga sedikit lebih penting \n
+            3 -> Sedikit lebih penting (Slightly more importance) \n
+            4 -> Sedikit lebih hingga jelas lebih penting \n
+            5 -> Jelas lebih penting (Materially more importance) \n
+            6 -> Jelas hingga sangat jelas lebih penting \n
+            7 -> Sangat jelas lebih penting (Significantly more importance) \n
+            8 -> Sangat jelas hingga mutlak lebih penting \n
+            9 -> Mutlak lebih penting (Absolutely more importance) \n
+    </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">SMDS</string>
+    <string name="nav_header_subtitle">smds@android.com</string>
+
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+
+</resources>

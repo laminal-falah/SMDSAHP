@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "107390705743",
+    "firebase_url": "https://smdsahp.firebaseio.com",
+    "project_id": "smdsahp",
+    "storage_bucket": "smdsahp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107390705743:android:172c6b363574035e",
+        "android_client_info": {
+          "package_name": "pd.sahang.mas.palembang.smds.ahp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107390705743-isndslh4jck445uarai7hleu0vm8th1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pd.sahang.mas.palembang.smds.ahp",
+            "certificate_hash": "62133a919c492ec6e6fdb91bdb9c3571962a1980"
+          }
+        },
+        {
+          "client_id": "107390705743-djf4f2jchphakubkpopojh4ttfp69hkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZotrhQM2r8q5IlrRn_WT7eEAA1HNBCfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107390705743-djf4f2jchphakubkpopojh4ttfp69hkp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
