@@ -64,10 +64,18 @@ public class SnackBarUtils {
         if (!(vg.getChildAt(0) instanceof InterceptTouchEventLayout)) {
             InterceptTouchEventLayout interceptLayout = new InterceptTouchEventLayout(App.mActivity.getApplicationContext());
             interceptLayout.setSnackbar(snackbar);
-            for (int i = 2; i < vg.getChildCount(); i++) {
-                View view = vg.getChildAt(i);
-                vg.removeView(view);
-                interceptLayout.addView(view);
+            if (viewGroup.getChildAt(0) instanceof DrawerLayout) {
+                for (int i = 2; i < vg.getChildCount(); i++) {
+                    View view = vg.getChildAt(i);
+                    vg.removeView(view);
+                    interceptLayout.addView(view);
+                }
+            } else {
+                for (int i = 0; i < vg.getChildCount(); i++) {
+                    View view = vg.getChildAt(i);
+                    vg.removeView(view);
+                    interceptLayout.addView(view);
+                }
             }
             vg.addView(interceptLayout, 0);
         } else {
