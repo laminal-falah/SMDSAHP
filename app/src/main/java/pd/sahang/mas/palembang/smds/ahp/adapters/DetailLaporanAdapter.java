@@ -38,6 +38,7 @@ public class DetailLaporanAdapter extends FirestoreAdapter<DetailLaporanAdapter.
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.tvNamaKarung) TextView tvNamaKarung;
+        @BindView(R.id.tvGradeKarung) TextView tvGradeKarung;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -46,6 +47,7 @@ public class DetailLaporanAdapter extends FirestoreAdapter<DetailLaporanAdapter.
 
         void bind(DocumentSnapshot snapshot, OnDetailLaporanListener mListener) {
             tvNamaKarung.setText(snapshot.getString(DetailLaporan.FIELD_NAMA_KARUNG));
+            tvGradeKarung.setText(snapshot.getString(DetailLaporan.FIELD_GRADE_KARUNG));
             itemView.setOnClickListener(v -> {
                 if (mListener != null) {
                     mListener.onSelectedDetailLaporan(snapshot);
