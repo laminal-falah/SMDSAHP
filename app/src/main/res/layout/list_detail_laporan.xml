@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hint_grade_karung"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subtitle"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/tvNamaKarung"
         app:layout_constraintEnd_toEndOf="parent"
