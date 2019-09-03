@@ -3,6 +3,7 @@ package pd.sahang.mas.palembang.smds.ahp.ui.homepage.laporan.inisiasi;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import org.json.JSONObject;
@@ -17,6 +18,8 @@ public interface AddEditLaporanInterface {
     void onInitFirestore();
     void onDetailLaporan(DetailLaporan detailLaporan);
     boolean validate();
+    void getDataMinMax();
+    void getSubKriteria(@NonNull QueryDocumentSnapshot snapshot);
     void onResetForm();
     void dispatchTakePictureIntent();
     File createImageFile() throws IOException;

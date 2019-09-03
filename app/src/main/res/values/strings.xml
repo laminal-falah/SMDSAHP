@@ -156,6 +156,8 @@
     <string name="hint_nama_sub_kriteria_karung">Nama Sub Kriteria</string>
     <string name="hint_nilai_sub_kriteria_karung">Nilai Sub Kriteria</string>
     <string name="error_laporan">%s diperlukan !</string>
+    <string name="error_laporan_1">%s melebihi nilai maksimal</string>
+    <string name="error_laporan_2">%s dibawah nilai minimum</string>
     <string name="btn_simpan_laporan">Simpan</string>
 
     <!-- Strings related to Manajemen Users -->

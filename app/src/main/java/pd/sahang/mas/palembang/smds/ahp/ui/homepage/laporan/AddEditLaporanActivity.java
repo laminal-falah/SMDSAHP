@@ -57,6 +57,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -171,6 +172,8 @@ public class AddEditLaporanActivity extends AppCompatActivity implements AddEdit
     private NotificationManagerCompat notificationManagerCompat;
     private double progress;
     private String grade;
+    private Map<String, Object> tempMax;
+    private Map<String, Object> tempMin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -331,6 +334,10 @@ public class AddEditLaporanActivity extends AppCompatActivity implements AddEdit
                         getKriteria(task);
                     }
                 });
+
+        tempMin = new HashMap<>();
+        tempMax = new HashMap<>();
+        getDataMinMax();
     }
 
     @Override
@@ -375,6 +382,8 @@ public class AddEditLaporanActivity extends AppCompatActivity implements AddEdit
         for (int i = 0; i < rvKriteriaLaporan.getChildCount(); i++) {
             for (int j = 0; j < ((ViewGroup)rvKriteriaLaporan.getChildAt(i)).getChildCount(); j++) {
                 ViewGroup vg = ((ViewGroup) ((ViewGroup) rvKriteriaLaporan.getChildAt(i)).getChildAt(j));
+                TextView kodeNyoKriteria = (TextView) vg.getChildAt(0);
+                String kodeNyo = kodeNyoKriteria.getText().toString();
                 TextView kodeKriteria = (TextView) vg.getChildAt(1);
                 String kode = kodeKriteria.getText().toString();
                 TextInputLayout tlKriteria = (TextInputLayout) vg.getChildAt(2);
@@ -388,10 +397,61 @@ public class AddEditLaporanActivity extends AppCompatActivity implements AddEdit
                     tlKriteria.setError(null);
                     tlKriteria.setErrorEnabled(false);
                 }
+                if (!nilai.isEmpty()) {
+                    for (Map.Entry<String, Object> entry : tempMax.entrySet()) {
+                        if (entry.getKey().equals(kodeNyo) && Double.parseDouble(nilai) > (double) entry.getValue()) {
+                            valid = false;
+                            tlKriteria.setErrorEnabled(true);
+                            tlKriteria.setError(getString(R.string.error_laporan_1, kode));
+                            tlKriteria.requestFocus();
+                        }
+                    }
+                    for (Map.Entry<String, Object> entry : tempMin.entrySet()) {
+                        if (entry.getKey().equals(kodeNyo) && Double.parseDouble(nilai) < (double) entry.getValue()) {
+                            valid = false;
+                            tlKriteria.setErrorEnabled(true);
+                            tlKriteria.setError(getString(R.string.error_laporan_2, kode));
+                            tlKriteria.requestFocus();
+                        }
+                    }
+                }
             }
         }
 
         return valid;
+    }
+
+    @Override
+    public void getDataMinMax() {
+        mFirestore.collection(Kriteria.COLLECTION).get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful() && task.getResult().size() > 0) {
+                        for (QueryDocumentSnapshot snapshot : task.getResult()) {
+                            getSubKriteria(snapshot);
+                        }
+                    }
+                });
+    }
+
+    @Override
+    public void getSubKriteria(@NonNull QueryDocumentSnapshot snapshot) {
+        mFirestore.collection(Kriteria.COLLECTION).document(snapshot.getId())
+                .collection(SubKriteria.COLLECTION)
+                .get()
+                .addOnCompleteListener(task -> {
+                    int i = 0;
+                    List<Double> listMax = new ArrayList<>();
+                    List<Double> listMin = new ArrayList<>();
+                    for (QueryDocumentSnapshot snapshot1 : task.getResult()) {
+                        listMin.add(snapshot1.getDouble(SubKriteria.FIELD_NILAI_MIN_SUB_KRITERIA));
+                        listMax.add(snapshot1.getDouble(SubKriteria.FIELD_NILAI_MAX_SUB_KRITERIA));
+                        if (i == (task.getResult().size() - 1)) {
+                            tempMax.put(snapshot.getId(), Collections.max(listMax));
+                            tempMin.put(snapshot.getId(), Collections.min(listMin));
+                        }
+                        i++;
+                    }
+                });
     }
 
     @Override

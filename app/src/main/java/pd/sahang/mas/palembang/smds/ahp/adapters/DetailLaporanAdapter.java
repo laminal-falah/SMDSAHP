@@ -38,7 +38,7 @@ public class DetailLaporanAdapter extends FirestoreAdapter<DetailLaporanAdapter.
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.tvNamaKarung) TextView tvNamaKarung;
-        @BindView(R.id.tvGradeKarung) TextView tvGradeKarung;
+        @BindView(R.id.tvNamaGrade) TextView tvGradeKarung;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
